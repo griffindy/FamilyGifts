@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111225205544) do
+ActiveRecord::Schema.define(:version => 20111226214439) do
 
   create_table "gifts", :force => true do |t|
     t.string   "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20111225205544) do
     t.boolean  "bought"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "person_id"
   end
 
   create_table "people", :force => true do |t|
