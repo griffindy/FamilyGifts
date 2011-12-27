@@ -1,2 +1,8 @@
-<h1>People#show</h1>
-<p>Find me in app/views/people/show.html.erb</p>
+<h1><%= @person.name %></h1>
+<ul>
+  <% @person.gifts.each do |gift| %>
+    <li>
+      <%= link_to gift.name, person_gift_path(gift.id) %>
+    </li>
+  <% end %>
+</ul>
