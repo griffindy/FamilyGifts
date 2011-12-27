@@ -1,9 +1,10 @@
-<h1>Sakey Family Member</h1>
+<h1>Sakey Family Members</h1>
 <ul>
   <% @people.each do |person| %>
     <li>
-      <%= person.name %><br>
+      <%= link_to person.name, person_path(person.id) %><br>
       <%= person.birthday.to_formatted_s(:birthday) %>
     </li>
   <% end %>
 </ul>
+
