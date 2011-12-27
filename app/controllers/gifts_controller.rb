@@ -1,7 +1,7 @@
 class GiftsController < ApplicationController
   def index
-    @gifts = Gift.all
     @person = Person.find(params[:person_id])
+    @gifts = @person.gifts.all
   end
 
   def create
@@ -14,6 +14,8 @@ class GiftsController < ApplicationController
   end
 
   def show
+    @person = Person.find(params[:person_id])
+    @gift = Gift.find(params[:id])
   end
 
   def update
