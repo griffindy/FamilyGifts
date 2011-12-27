@@ -4,7 +4,13 @@
     <li>
       <%= gift.name %><br>
       <%= gift.descript %><br>
-      <%= gift.bought %>
+      <% if gift.bought %>
+        this gift has been bought
+      <% else %>
+        this gift has not been bought
+      <% end %>
     </li>
   <% end %>
 </ul>
+
+<%= link_to 'People', people_path %>
